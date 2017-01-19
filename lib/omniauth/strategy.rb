@@ -492,6 +492,7 @@ module OmniAuth
     end
 
     def ssl?
+      return true
       request.env['HTTPS'] == 'on' ||
         request.env['HTTP_X_FORWARDED_SSL'] == 'on' ||
         request.env['HTTP_X_FORWARDED_SCHEME'] == 'https' ||
